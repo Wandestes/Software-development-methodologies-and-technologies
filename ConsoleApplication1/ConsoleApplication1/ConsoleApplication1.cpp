@@ -51,3 +51,10 @@ void solveEquation(double a, double b, double c) {
     }
 }
 
+// Функція для інтерактивного режиму
+void interactiveMode() {
+    double a = getValidInput("a = ");
+    double b = getValidInput("b = ");
+    double c = getValidInput("c = ");
+    solveEquation(a, b, c);
+}
