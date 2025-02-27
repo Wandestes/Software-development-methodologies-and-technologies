@@ -79,3 +79,25 @@ void fileMode() {
 
     solveEquation(a, b, c);
 }
+
+// Головна функція з вибором режиму
+int main() {
+    int choice;
+    cout << "Select mode:" << endl;
+    cout << "1. Interactive mode" << endl;
+    cout << "2. File mode" << endl;
+    cout << "Your choice: ";
+    cin >> choice;
+
+    if (choice == 1) {
+        interactiveMode();
+    }
+    else if (choice == 2) {
+        fileMode();
+    }
+    else {
+        cout << "Invalid choice" << endl;
+    }
+
+    return 0;
+}
