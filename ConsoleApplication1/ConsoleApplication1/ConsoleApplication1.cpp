@@ -1,3 +1,5 @@
+//Code for static file:
+
 /*#include <iostream>
 #include <fstream>
 #include <cmath>
@@ -102,6 +104,8 @@ int main() {
     return 0;
 }*/
 
+
+//Code for dynamic files:
 #include <iostream>
 #include <fstream>
 #include <cmath>
