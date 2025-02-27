@@ -23,3 +23,31 @@ double getValidInput(const string& prompt) {
     }
 }
 
+// Функція для обчислення коренів
+void solveEquation(double a, double b, double c) {
+    cout << "Equation is: (" << a << ") x^2 + (" << b << ") x + (" << c << ") = 0" << endl;
+
+    if (a == 0) {
+        cout << "Error. a cannot be 0" << endl;
+        return;
+    }
+
+    double discriminant = b * b - 4 * a * c;
+
+    if (discriminant > 0) {
+        double x1 = (-b + sqrt(discriminant)) / (2 * a);
+        double x2 = (-b - sqrt(discriminant)) / (2 * a);
+        cout << "There are 2 roots" << endl;
+        cout << "x1 = " << x1 << endl;
+        cout << "x2 = " << x2 << endl;
+    }
+    else if (discriminant == 0) {
+        double x = -b / (2 * a);
+        cout << "There are 1 roots" << endl;
+        cout << "x1 = " << x << endl;
+    }
+    else {
+        cout << "There are 0 roots" << endl;
+    }
+}
+
