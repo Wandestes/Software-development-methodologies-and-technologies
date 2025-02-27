@@ -58,3 +58,24 @@ void interactiveMode() {
     double c = getValidInput("c = ");
     solveEquation(a, b, c);
 }
+
+// Функція для неінтерактивного режиму
+void fileMode() {
+    ifstream file;
+    // Шлях до файлу вказано явно
+    file.open("C:\\Users\\Wandestes\\source\\repos\\ConsoleApplication1\\x64\\Debug\\Test.txt");
+
+    if (!file) {
+        cout << "File does not exist or cannot be opened." << endl;
+        exit(1);
+    }
+
+    double a, b, c;
+    file >> a >> b >> c;
+    if (file.fail() || !file.eof()) {
+        cout << "Invalid file format" << endl;
+        exit(1);
+    }
+
+    solveEquation(a, b, c);
+}
